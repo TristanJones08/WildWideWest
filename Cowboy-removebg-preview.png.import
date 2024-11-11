@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tkjjsuaixrrg"
-path="res://.godot/imported/Cowboy-removebg-preview.png-da822a7428848f534629ce01ec615073.ctex"
+path="res://.godot/imported/Cowboy-removebg-preview.png-98a7be7d4a8378a8fae0826a93b0653c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/Cowboy-removebg-preview.png"
-dest_files=["res://.godot/imported/Cowboy-removebg-preview.png-da822a7428848f534629ce01ec615073.ctex"]
+source_file="res://Cowboy-removebg-preview.png"
+dest_files=["res://.godot/imported/Cowboy-removebg-preview.png-98a7be7d4a8378a8fae0826a93b0653c.ctex"]
 
 [params]
 
