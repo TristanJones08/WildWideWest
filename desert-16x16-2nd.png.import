@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nv635get4huq"
-path="res://.godot/imported/Cowboy.png-279e7111a6eb96e53e0d1650b8ec93f3.ctex"
+uid="uid://bgky26mw7mpx7"
+path="res://.godot/imported/desert-16x16-2nd.png-70866a2ab0b46bd93cdb41b63608464d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cowboy.png"
-dest_files=["res://.godot/imported/Cowboy.png-279e7111a6eb96e53e0d1650b8ec93f3.ctex"]
+source_file="res://desert-16x16-2nd.png"
+dest_files=["res://.godot/imported/desert-16x16-2nd.png-70866a2ab0b46bd93cdb41b63608464d.ctex"]
 
 [params]
 

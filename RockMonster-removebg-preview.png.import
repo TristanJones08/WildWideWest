@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://di2d4n6da2asd"
-path="res://.godot/imported/RockMonster-removebg-preview.png-e44edc56b5d19fecd2d4a8207e69b63d.ctex"
+path="res://.godot/imported/RockMonster-removebg-preview.png-d70625cbabba99ac4a596d01c65b6fa9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/RockMonster-removebg-preview.png"
-dest_files=["res://.godot/imported/RockMonster-removebg-preview.png-e44edc56b5d19fecd2d4a8207e69b63d.ctex"]
+source_file="res://RockMonster-removebg-preview.png"
+dest_files=["res://.godot/imported/RockMonster-removebg-preview.png-d70625cbabba99ac4a596d01c65b6fa9.ctex"]
 
 [params]
 
