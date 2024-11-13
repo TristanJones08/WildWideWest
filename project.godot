@@ -10,8 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Wild Wide West"
-run/main_scene="res://main_game.tscn"
+config/name="TowerDefense"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 

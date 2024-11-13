@@ -14,16 +14,20 @@ script = ExtResource("1_qjil6")
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0
 offset_left = -1.0
-offset_right = 671.0
-offset_bottom = 410.0
+offset_right = 86.0
+offset_bottom = 65.0
 texture = ExtResource("2_lty28")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
 
 [node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
 layout_mode = 0
-offset_left = 59.0
-offset_top = 49.0
-offset_right = 844.0
-offset_bottom = 598.0
+offset_left = 5.0
+offset_top = 3.0
+offset_right = 81.0
+offset_bottom = 67.0
 columns = 4
 
 [node name="inv_UI_slot" parent="NinePatchRect/GridContainer" instance=ExtResource("3_d5w1d")]
@@ -36,4 +40,28 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="inv_UI_slot4" parent="NinePatchRect/GridContainer" instance=ExtResource("3_d5w1d")]
+layout_mode = 2
+
+[node name="inv_UI_slot5" parent="NinePatchRect/GridContainer" instance=ExtResource("3_d5w1d")]
+layout_mode = 2
+
+[node name="inv_UI_slot6" parent="NinePatchRect/GridContainer" instance=ExtResource("3_d5w1d")]
+layout_mode = 2
+
+[node name="inv_UI_slot7" parent="NinePatchRect/GridContainer" instance=ExtResource("3_d5w1d")]
+layout_mode = 2
+
+[node name="inv_UI_slot8" parent="NinePatchRect/GridContainer" instance=ExtResource("3_d5w1d")]
+layout_mode = 2
+
+[node name="inv_UI_slot9" parent="NinePatchRect/GridContainer" instance=ExtResource("3_d5w1d")]
+layout_mode = 2
+
+[node name="inv_UI_slot10" parent="NinePatchRect/GridContainer" instance=ExtResource("3_d5w1d")]
+layout_mode = 2
+
+[node name="inv_UI_slot11" parent="NinePatchRect/GridContainer" instance=ExtResource("3_d5w1d")]
+layout_mode = 2
+
+[node name="inv_UI_slot12" parent="NinePatchRect/GridContainer" instance=ExtResource("3_d5w1d")]
 layout_mode = 2
