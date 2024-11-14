@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dy4c3chcjj2lg"]
+[gd_scene load_steps=22 format=3 uid="uid://b4lsxgg10pnx0"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_keq52"]
 [ext_resource type="Texture2D" uid="uid://bjm7fqcwwhmim" path="res://CowboyIdle-removebg-preview.png" id="2_hrwsf"]
