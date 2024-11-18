@@ -15,17 +15,17 @@ func player_movement(delta):
 		current_dir="right"
 		velocity.x=SPEED
 		velocity.y=0
-	if Input.is_action_pressed("ui_left"):
+	elif Input.is_action_pressed("ui_left"):
 		current_dir="left"
 		play_anim(1)
 		velocity.x=-SPEED
 		velocity.y=0
-	if Input.is_action_pressed("ui_down"):
+	elif Input.is_action_pressed("ui_down"):
 		play_anim(1)
 		current_dir="down"
 		velocity.x=0
 		velocity.y=SPEED
-	if Input.is_action_pressed("ui_up"):
+	elif Input.is_action_pressed("ui_up"):
 		play_anim(1)
 		current_dir = "up"
 		velocity.x=0
