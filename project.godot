@@ -10,7 +10,12 @@ config_version=5
 
 [application]
 
+<<<<<<< HEAD
 config/name="WildWideWest"
+=======
+config/name="TowerDefense"
+run/main_scene="res://main_game.tscn"
+>>>>>>> ef385a42bf84f6dbbaf2504ba54098e614d9e5c7
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
