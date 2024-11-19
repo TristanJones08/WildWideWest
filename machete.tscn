@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://b632d5j57rhne"]
+[gd_scene load_steps=2 format=3 uid="uid://bmt4bl2b1pask"]
 
 [ext_resource type="Texture2D" uid="uid://dbpkbro7hlrv6" path="res://images-removebg-preview.png" id="1_u1x2c"]
 
 [node name="Machete" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.139, 0.15)
 texture = ExtResource("1_u1x2c")

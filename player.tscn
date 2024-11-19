@@ -1,8 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://dy4c3chcjj2lg"]
+[gd_scene load_steps=25 format=3 uid="uid://b2ugb2fnqvf8k"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_keq52"]
+[ext_resource type="Resource" uid="uid://dtno5yhrnehf1" path="res://inventory/playerinv.tres" id="2_2h2ow"]
 [ext_resource type="Texture2D" uid="uid://bjm7fqcwwhmim" path="res://CowboyIdle-removebg-preview.png" id="2_hrwsf"]
 [ext_resource type="Texture2D" uid="uid://c1bjot67gw1ke" path="res://CowboyAnimation-removebg-preview.png" id="3_umlw4"]
+[ext_resource type="PackedScene" uid="uid://ghkuta8coce0" path="res://inventory/inv_ui.tscn" id="5_wqm4n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xrj3y"]
 atlas = ExtResource("2_hrwsf")
@@ -130,20 +132,34 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0kep6"]
-radius = 16.0
-height = 50.0
+radius = 9.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bm6lh"]
 
 [node name="player" type="CharacterBody2D"]
 collision_layer = 3
 script = ExtResource("1_keq52")
+inv = ExtResource("2_2h2ow")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.290217, 0.215909)
+position = Vector2(0, -11)
+scale = Vector2(0.125, 0.137626)
 sprite_frames = SubResource("SpriteFrames_ao8d1")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -11)
 shape = SubResource("CapsuleShape2D_0kep6")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(3, 3)
+[node name="Inv_UI" parent="." instance=ExtResource("5_wqm4n")]
+offset_left = -18.0
+offset_top = -57.0
+offset_right = 20.0
+offset_bottom = -28.0
+
+[node name="Directions" type="Marker2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="Directions"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Directions/Area2D"]
+shape = SubResource("CircleShape2D_bm6lh")
