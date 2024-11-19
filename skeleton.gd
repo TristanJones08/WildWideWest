@@ -1,11 +1,23 @@
-extends Node2D
+extends CharacterBody2D
 
+var speed = 80
+var player_chase = false
+var player = null
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func _physics_process(delta):
+	if player_chase:
+		position += (player.position - position)/speed
 
+		if(player.position.x - position.x) < 0:
+			$Sprite.flip_h = true
+		else:
+			$Sprite.flip_h = false
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _on_detection_area_body_entered(body):
+	player = body
+	player_chase = true
+	
+
+func _on_detection_area_body_exited(body):
+	player = null
+	player_chase = false
