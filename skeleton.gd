@@ -8,6 +8,11 @@ func _physics_process(delta):
 	if player_chase:
 		position += (player.position - position)/speed
 
+		if(player.position.x - position.x) < 0:
+			$Sprite.flip_h = true
+		else:
+			$Sprite.flip_h = false
+
 func _on_detection_area_body_entered(body):
 	player = body
 	player_chase = true

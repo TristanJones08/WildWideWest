@@ -572,4 +572,4 @@ layer_0/tile_data = PackedInt32Array(1507312, 262145, 4, 6226097, 393216, 0, 616
 position = Vector2(255, 379)
 
 [node name="skeleton" parent="." instance=ExtResource("3_lvqho")]
-position = Vector2(475, 378)
+position = Vector2(100, 371)
