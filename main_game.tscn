@@ -574,4 +574,3 @@ scale = Vector2(5, 5)
 
 [node name="skeleton" parent="." instance=ExtResource("3_lvqho")]
 position = Vector2(100, 371)
-
