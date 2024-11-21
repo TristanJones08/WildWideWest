@@ -5,6 +5,7 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Machete" type="Sprite2D" parent="."]
+position = Vector2(0, 1.90735e-06)
 rotation = -1.55509
-scale = Vector2(0.0312654, 0.0278846)
+scale = Vector2(0.00379745, 0.00455584)
 texture = ExtResource("1_f8rma")

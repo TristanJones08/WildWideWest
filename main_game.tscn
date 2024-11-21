@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://11p8c16qgpa0"]
+[gd_scene load_steps=5 format=3 uid="uid://11p8c16qgpa0"]
 
 [ext_resource type="Texture2D" uid="uid://cbaa8uwmrb4ky" path="res://desert-16x16-2nd.png" id="1_n3ckx"]
-[ext_resource type="PackedScene" uid="uid://dy4c3chcjj2lg" path="res://player.tscn" id="2_8bxn1"]
-[ext_resource type="PackedScene" uid="uid://bit5ixlr3jent" path="res://skeleton.tscn" id="3_lvqho"]
+[ext_resource type="PackedScene" uid="uid://b2ugb2fnqvf8k" path="res://player.tscn" id="2_8bxn1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rod88"]
 texture = ExtResource("1_n3ckx")
@@ -571,4 +570,3 @@ layer_0/tile_data = PackedInt32Array(1507312, 262145, 4, 6226097, 393216, 0, 616
 [node name="player" parent="." instance=ExtResource("2_8bxn1")]
 position = Vector2(465, 707)
 scale = Vector2(5, 5)
-
