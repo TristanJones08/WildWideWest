@@ -1,10 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://fn0nwo8avbo5"]
+[gd_scene load_steps=2 format=3 uid="uid://fn0nwo8avbo5"]
 
-[ext_resource type="Script" path="res://skeleton.gd" id="1_mmecj"]
 [ext_resource type="Texture2D" uid="uid://cic2n0tm08woi" path="res://png-clipart-skeleton-2d-computer-graphics-sprite-two-dimensional-space-skeleton-game-video-game-removebg-preview.png" id="1_yuk0t"]
 
 [node name="Skeleton" type="Node2D"]
-script = ExtResource("1_mmecj")
 
 [node name="Png-clipart-skeleton-2d-computer-graphics-sprite-two-dimensional-space-skeleton-game-video-game-removebg-preview" type="Sprite2D" parent="."]
 position = Vector2(0, 2)
