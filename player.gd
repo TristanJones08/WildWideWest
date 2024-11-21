@@ -23,7 +23,7 @@ func player_movement(delta):
 		current_dir="down"
 		velocity.x=0
 		velocity.y=SPEED
-	elif Input.is_action_pressed("ui_right"):
+	elif Input.is_action_pressed("ui_up"):
 		current_dir = "up"
 		velocity.x=0
 		velocity.y=-SPEED
