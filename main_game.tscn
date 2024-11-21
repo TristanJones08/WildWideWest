@@ -1,7 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://11p8c16qgpa0"]
+[gd_scene load_steps=6 format=3 uid="uid://11p8c16qgpa0"]
 
 [ext_resource type="Texture2D" uid="uid://cbaa8uwmrb4ky" path="res://desert-16x16-2nd.png" id="1_n3ckx"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://b2ugb2fnqvf8k" path="res://player.tscn" id="2_8bxn1"]
+=======
+[ext_resource type="PackedScene" uid="uid://dy4c3chcjj2lg" path="res://player.tscn" id="2_8bxn1"]
+[ext_resource type="PackedScene" uid="uid://bit5ixlr3jent" path="res://skeleton.tscn" id="3_lvqho"]
+>>>>>>> f445eaa466bbd21b4cf5114aadb5ad2c91429fec
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rod88"]
 texture = ExtResource("1_n3ckx")
@@ -552,6 +557,7 @@ texture = ExtResource("1_n3ckx")
 
 [sub_resource type="TileSet" id="TileSet_8c1b5"]
 tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Path "
 terrain_set_0/terrain_0/color = Color(0.950608, 0.865266, 0.7951, 1)
@@ -569,3 +575,7 @@ layer_0/tile_data = PackedInt32Array(1507312, 262145, 4, 6226097, 393216, 0, 616
 [node name="player" parent="." instance=ExtResource("2_8bxn1")]
 position = Vector2(465, 707)
 scale = Vector2(5, 5)
+
+[node name="skeleton" parent="." instance=ExtResource("3_lvqho")]
+position = Vector2(100, 371)
+
