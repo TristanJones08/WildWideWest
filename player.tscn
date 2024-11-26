@@ -147,7 +147,8 @@ inv = ExtResource("2_2h2ow")
 position = Vector2(0, -11)
 scale = Vector2(0.125, 0.137626)
 sprite_frames = SubResource("SpriteFrames_ao8d1")
-animation = &"idle"
+animation = &"walking"
+frame_progress = 0.491949
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -11)
