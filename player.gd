@@ -47,3 +47,6 @@ func play_anim(movement):
 	elif movement == 0:
 		anim.play("idle")
 @export var inv: Inv
+
+func collect (item):
+	inv.insert(item)

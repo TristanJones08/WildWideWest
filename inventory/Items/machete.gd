@@ -8,3 +8,8 @@ func _on_body_entered(body: Node2D) -> void:
 		print("pass")
 		return
 	print ("Take")
+	
+
+@export var item: InvItem
+
+var player = null
