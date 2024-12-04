@@ -1,7 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhf32kwvl55fw"]
+[gd_scene load_steps=3 format=3 uid="uid://dhf32kwvl55fw"]
 
-[ext_resource type="PackedScene" uid="uid://b2ugb2fnqvf8k" path="res://player.tscn" id="1_en6ai"]
+[ext_resource type="PackedScene" uid="uid://b2ugb2fnqvf8k" path="res://Player/player.tscn" id="1_en6ai"]
+[ext_resource type="PackedScene" uid="uid://chqobxrdbrb02" path="res://Player/Playerhealth/player_ui.tscn" id="2_e55qe"]
 
 [node name="World" type="Node2D"]
 
-[node name="player" parent="." instance=ExtResource("1_en6ai")]
+[node name="player" parent="." node_paths=PackedStringArray("player_ui") instance=ExtResource("1_en6ai")]
+player_ui = NodePath("../PlayerUI")
+
+[node name="PlayerUI" parent="." instance=ExtResource("2_e55qe")]
