@@ -9,9 +9,8 @@
 
 [node name="Collectable_Container" type="Node2D" parent="."]
 
+[node name="MacheteItem" parent="Collectable_Container" instance=ExtResource("2_mycib")]
+position = Vector2(41, -7)
+
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
-
-[node name="MacheteItem" parent="." instance=ExtResource("2_mycib")]
-position = Vector2(41, -7)
-item = null
