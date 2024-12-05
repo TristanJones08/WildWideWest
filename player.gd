@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 100.0
+const SPEED = 150.0
 var current_dir = "none"
 func _ready():
 	$AnimatedSprite2D.play("idle")
@@ -14,22 +14,31 @@ func player_movement(delta):
 		current_dir="right"
 		velocity.x=SPEED
 		velocity.y=0
+		play_anim(1)
+
 	elif Input.is_action_pressed("ui_left"):
 		current_dir="left"
-	
 		velocity.x=-SPEED
 		velocity.y=0
+		play_anim(1)
+
 	elif Input.is_action_pressed("ui_down"):
 		current_dir="down"
 		velocity.x=0
 		velocity.y=SPEED
-	elif Input.is_action_pressed("ui_right"):
+		play_anim(1)
+
+	elif Input.is_action_pressed("ui_up"):
 		current_dir = "up"
 		velocity.x=0
 		velocity.y=-SPEED
-	else: 
+		play_anim(1)
+
+	else:
 		velocity.x=0
 		velocity.y=0
+		play_anim(0)
+
 	move_and_slide()
 
 func play_anim(movement):
@@ -42,3 +51,7 @@ func play_anim(movement):
 		anim.play("walking")
 	elif movement == 0:
 		anim.play("idle")
+@export var inv: Inv
+
+func collect (item):
+	inv.insert(item)
