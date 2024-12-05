@@ -6,12 +6,14 @@
 [node name="World" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_en6ai")]
+position = Vector2(0, -2)
 
 [node name="Collectable_Container" type="Node2D" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -2)
 zoom = Vector2(4, 4)
 
 [node name="MacheteItem" parent="." instance=ExtResource("2_mycib")]
-position = Vector2(41, -7)
+position = Vector2(29, -5)
 item = null

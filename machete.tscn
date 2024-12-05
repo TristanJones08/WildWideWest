@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c1qqt30lobwir"]
 
-[ext_resource type="Texture2D" uid="uid://cqel66u10s2us" path="res://inventory/machete.png" id="1_f8rma"]
+[ext_resource type="Texture2D" uid="uid://c4ihkaqp2y8wb" path="res://inventory/machete.png" id="1_f8rma"]
 
 [node name="Node2D" type="Node2D"]
 

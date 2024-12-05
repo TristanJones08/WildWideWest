@@ -22,7 +22,7 @@ func _process(delta):
 			open()
 
 func open():
-	visible = true
+	self.visible = true
 	is_open = true
 
 func close():

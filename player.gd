@@ -1,4 +1,7 @@
 extends CharacterBody2D
+class_name Player
+
+@export var inv: Inv
 
 
 const SPEED = 100.0
@@ -46,7 +49,9 @@ func play_anim(movement):
 		anim.play("walking")
 	elif movement == 0:
 		anim.play("idle")
-@export var inv: Inv
+
+func player():
+	pass
 
 func collect (item):
 	inv.insert(item)
