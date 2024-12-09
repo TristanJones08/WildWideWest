@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dhf32kwvl55fw"]
 
 [ext_resource type="PackedScene" uid="uid://b2ugb2fnqvf8k" path="res://player.tscn" id="1_en6ai"]
-[ext_resource type="PackedScene" uid="uid://cqj67a3anusho" path="res://inventory/Items/machete.tscn" id="2_mycib"]
+[ext_resource type="PackedScene" uid="uid://cqj67a3anusho" path="res://inventory/items/machete.tscn" id="2_mycib"]
 
 [node name="World" type="Node2D"]
 
