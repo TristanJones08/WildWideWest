@@ -14,11 +14,11 @@ script = ExtResource("1_t4gl7")
 [node name="MarginContainer" type="MarginContainer" parent="."]
 offset_left = 2.0
 offset_top = 3.0
-offset_right = 202.0
-offset_bottom = 23.0
+offset_right = 324.0
+offset_bottom = 88.0
 
 [node name="healthbar" type="ProgressBar" parent="MarginContainer"]
-custom_minimum_size = Vector2(200, 20)
+custom_minimum_size = Vector2(400, 40)
 layout_mode = 2
 size_flags_horizontal = 0
 theme = SubResource("Theme_nfq1x")
