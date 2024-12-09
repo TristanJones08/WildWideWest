@@ -31,7 +31,6 @@ func rotate_while_idle(delta: float):
 		var rotation_angle = lerp_angle(deg_to_rad(owner.rotation_degrees), deg_to_rad(rotation_degrees), delta * rotation_speed)
 		owner.rotation = rotation_angle
 	
-	print(absf(owner.rotation_degrees - rotation_degrees))
 	if absf(owner.rotation_degrees - rotation_degrees) <1.0:
 		is_rotating = false
 		rotation_timer.setup()
