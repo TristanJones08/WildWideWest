@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://vuqh407yemff"]
+
+[ext_resource type="Script" path="res://inventory/Items/lost_item.gd" id="1_si2go"]
+[ext_resource type="Texture2D" uid="uid://dihobvo2mecmt" path="res://inventory/Items/pixilart-drawing.png" id="1_wjrpv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ag3x"]
+radius = 7.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1lmju"]
+radius = 7.07107
+
+[node name="LostItem" type="StaticBody2D"]
+script = ExtResource("1_si2go")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5ag3x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2.38419e-07, -2.38419e-07)
+scale = Vector2(0.571429, 0.571429)
+texture = ExtResource("1_wjrpv")
+
+[node name="interactable_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable_area"]
+shape = SubResource("CircleShape2D_1lmju")
+
+[connection signal="body_entered" from="interactable_area" to="." method="_on_interactable_area_body_entered"]
