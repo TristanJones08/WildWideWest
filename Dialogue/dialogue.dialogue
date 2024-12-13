@@ -1,15 +1,16 @@
 ~ start
 
-Bald Guy: Howdy! Have you seen my hat, by chance?
-- No.
-	Bald Guy: Well I hope you manage to come across it.
-- Yes.
-	Bald Guy: Really?! That's great! Could you get it for me?
-	- Sure.
-		Bald Guy: You're a lifesaver! => END 
-	- Not enough time.
-		Bald Guy: Aww man. => END
-
-
+if global.state.given_LostItem == false
+	Bald Guy: Howdy! Have you seen my hat, by chance?
+	if global.state.found_LostItem == true:
+		Bald Guy: You have it! Thank you so much!
+	- No.
+		Bald Guy: Well I hope you manage to come across it.
+	- Yes.
+		Bald Guy: Really?! That's great! Could you get it for me?
+		- Sure.
+			Bald Guy: You're a lifesaver! => END 
+		- Not enough time.
+			Bald Guy: Aww man. => END
 
 => END
