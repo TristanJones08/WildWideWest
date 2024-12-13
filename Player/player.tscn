@@ -1,10 +1,11 @@
-[gd_scene load_steps=27 format=3 uid="uid://b2ugb2fnqvf8k"]
+[gd_scene load_steps=28 format=3 uid="uid://dsfx8x1m0phnr"]
 
-[ext_resource type="Script" path="res://Player/player.gd" id="1_keq52"]
-[ext_resource type="Resource" uid="uid://dtno5yhrnehf1" path="res://Player/inventory/playerinv.tres" id="2_2h2ow"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_vx6io"]
+[ext_resource type="Resource" path="res://inventory/playerinv.tres" id="2_2h2ow"]
 [ext_resource type="Texture2D" uid="uid://bjm7fqcwwhmim" path="res://Spirtes/CowboyIdle-removebg-preview.png" id="2_hrwsf"]
 [ext_resource type="Texture2D" uid="uid://c1bjot67gw1ke" path="res://Spirtes/CowboyAnimation-removebg-preview.png" id="3_umlw4"]
-[ext_resource type="PackedScene" uid="uid://ghkuta8coce0" path="res://Player/inventory/inv_ui.tscn" id="5_wqm4n"]
+[ext_resource type="PackedScene" path="res://inventory/inv_ui.tscn" id="5_wqm4n"]
+[ext_resource type="PackedScene" uid="uid://hioha2y3pedm" path="res://gun.tscn" id="6_ito28"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xrj3y"]
 atlas = ExtResource("2_hrwsf")
@@ -147,7 +148,7 @@ ProgressBar/styles/fill = SubResource("StyleBoxFlat_h1nvf")
 
 [node name="player" type="CharacterBody2D"]
 collision_layer = 3
-script = ExtResource("1_keq52")
+script = ExtResource("1_vx6io")
 inv = ExtResource("2_2h2ow")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -163,9 +164,9 @@ shape = SubResource("CapsuleShape2D_0kep6")
 
 [node name="Inv_UI" parent="." instance=ExtResource("5_wqm4n")]
 offset_left = -8.0
-offset_top = -17.0
-offset_right = 8.0
-offset_bottom = -4.0
+offset_top = -34.0
+offset_right = 30.0
+offset_bottom = -5.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
@@ -182,5 +183,8 @@ theme = SubResource("Theme_5bkw6")
 step = 1.0
 value = 100.0
 show_percentage = false
+
+[node name="Gun" parent="." instance=ExtResource("6_ito28")]
+position = Vector2(1, 0)
 
 [connection signal="timeout" from="invulnerable timer" to="." method="_on_invulnerable_timer_timeout"]

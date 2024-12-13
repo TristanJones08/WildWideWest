@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bit5ixlr3jent"]
 
-[ext_resource type="Script" path="res://enemy/skeleton.gd" id="1_mmecj"]
+[ext_resource type="Script" path="res://scripts/skeleton.gd" id="1_mmecj"]
 [ext_resource type="Texture2D" uid="uid://cic2n0tm08woi" path="res://png-clipart-skeleton-2d-computer-graphics-sprite-two-dimensional-space-skeleton-game-video-game-removebg-preview.png" id="1_yuk0t"]
 [ext_resource type="PackedScene" uid="uid://d2smgcwcvo12p" path="res://enemy/wander.tscn" id="3_chqu8"]
 

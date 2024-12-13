@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://11p8c16qgpa0"]
+[gd_scene load_steps=6 format=3 uid="uid://c34xv7hraxpyg"]
 
-[ext_resource type="Texture2D" uid="uid://cbaa8uwmrb4ky" path="res://desert-16x16-2nd.png" id="1_n3ckx"]
-[ext_resource type="PackedScene" uid="uid://b2ugb2fnqvf8k" path="res://player.tscn" id="2_8bxn1"]
+[ext_resource type="Texture2D" uid="uid://cbaa8uwmrb4ky" path="res://Spirtes/desert-16x16-2nd.png" id="1_n3ckx"]
+[ext_resource type="PackedScene" uid="uid://dsfx8x1m0phnr" path="res://Player/player.tscn" id="2_8bxn1"]
+[ext_resource type="PackedScene" uid="uid://bit5ixlr3jent" path="res://enemy/skeleton.tscn" id="3_lvqho"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rod88"]
 texture = ExtResource("1_n3ckx")
@@ -571,9 +572,6 @@ layer_0/tile_data = PackedInt32Array(1507312, 262145, 4, 6226097, 393216, 0, 616
 position = Vector2(498, 358)
 scale = Vector2(5, 5)
 
-[node name="skeleton" parent="." instance=ExtResource("3_lvqho")]
-position = Vector2(302, 353)
-
 [node name="Marker2D" type="Marker2D" parent="." groups=["enemypatol"]]
 position = Vector2(393, 426)
 
@@ -591,3 +589,6 @@ position = Vector2(694, 419)
 
 [node name="Marker2D6" type="Marker2D" parent="." groups=["enemypatol"]]
 position = Vector2(596, 173)
+
+[node name="skeleton" parent="." instance=ExtResource("3_lvqho")]
+position = Vector2(159, 381)
