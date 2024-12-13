@@ -22,14 +22,4 @@ func _physics_process(delta):
 	for item in nearby:
 		print(item.name)
 		if item is Player:
-			player.take_damage(10)
-
-func _on_detection_area_entered(body):
-		player = body
-		player_chase = true
-
-func _on_detection_area_exited(body):
-		player = null
-		player_chase = false
-
-
+			item.take_damage(10)

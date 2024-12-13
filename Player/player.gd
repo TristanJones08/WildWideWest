@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name Player
 
+@onready var invulnerable_timer = $"invulnerable timer"
 const SPEED = 100.0
 var current_dir = "none"
 var enemy_inattack_range = false
@@ -60,11 +61,15 @@ func play_anim(movement):
 			anim.play("idle")
 @export var inv: Inv
 
-
+	
 func take_damage(amount):
 	if allow_damage == true:
 		allow_damage = false
 		health -= amount
+		$HealthBar.value = health
+		invulnerable_timer.stop()
+		invulnerable_timer.start()
+		
 
 func _on_invulnerable_timer_timeout():
 	allow_damage = true

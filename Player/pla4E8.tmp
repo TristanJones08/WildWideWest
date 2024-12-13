@@ -179,7 +179,7 @@ offset_right = -52.0
 offset_bottom = -42.0
 theme = SubResource("Theme_5bkw6")
 step = 1.0
-value = 100.0
+value = 50.0
 show_percentage = false
 
 [connection signal="timeout" from="invulnerable timer" to="." method="_on_invulnerable_timer_timeout"]
