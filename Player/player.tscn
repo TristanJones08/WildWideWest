@@ -1,7 +1,7 @@
 [gd_scene load_steps=28 format=3 uid="uid://dsfx8x1m0phnr"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_vx6io"]
-[ext_resource type="Resource" path="res://inventory/playerinv.tres" id="2_2h2ow"]
+[ext_resource type="Resource" uid="uid://dtno5yhrnehf1" path="res://inventory/playerinv.tres" id="2_2h2ow"]
 [ext_resource type="Texture2D" uid="uid://bjm7fqcwwhmim" path="res://Spirtes/CowboyIdle-removebg-preview.png" id="2_hrwsf"]
 [ext_resource type="Texture2D" uid="uid://c1bjot67gw1ke" path="res://Spirtes/CowboyAnimation-removebg-preview.png" id="3_umlw4"]
 [ext_resource type="PackedScene" path="res://inventory/inv_ui.tscn" id="5_wqm4n"]

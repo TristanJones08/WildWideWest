@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4ihkaqp2y8wb"
-path="res://.godot/imported/machete.png-b1d11662011b11ee093cdc0ffdc04ba4.ctex"
+path="res://.godot/imported/machete.png-34ed6a177e9303ccd90f198720bc0d2f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://inventory/machete.png"
-dest_files=["res://.godot/imported/machete.png-b1d11662011b11ee093cdc0ffdc04ba4.ctex"]
+source_file="res://Player/inventory/machete.png"
+dest_files=["res://.godot/imported/machete.png-34ed6a177e9303ccd90f198720bc0d2f.ctex"]
 
 [params]
 
