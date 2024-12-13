@@ -3,6 +3,9 @@ class_name Player
 
 @export var inv: Inv
 
+@onready var animated_sprite_2d = $AnimatedSprite2D
+@onready var gun = $Gun
+var direction = Vector2.ZERO
 
 const SPEED = 100.0
 var current_dir = "none"
@@ -10,6 +13,10 @@ func _ready():
 	$AnimatedSprite2D.play("idle")
 
 func _physics_process(delta):
+	if Input.is_action_pressed("attack"):
+		gun.shoot()
+	if direction != Vector2.ZERO:
+		gun.setup_direction(direction)
 	player_movement(delta)
 
 func player_movement(delta):
