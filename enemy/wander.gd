@@ -10,19 +10,19 @@ var direction :Vector2 = Vector2.ZERO
 
 func _ready():
 	positions = get_tree().get_nodes_in_group(group_name)
-	_get_positions()
-	_get_next_position()
+	get_positions()
+	get_next_position()
 
 func _physics_process(_delta):
 	if global_position.distance_to(current_position.position) < 10:
-		_get_next_position()
+		get_next_position()
 
-func _get_positions():
+func get_positions():
 	temp_positions = positions.duplicate()
 	temp_positions.shuffle()
 
-func _get_next_position():
+func get_next_position():
 	if temp_positions.is_empty():
-		_get_positions()
+		get_positions()
 	current_position = temp_positions.pop_front()
-	direction = to_local(current_position.position).normalized()
+	direction = to_local(current_position.global_position).normalized()

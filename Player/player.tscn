@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_keq52"]
 [ext_resource type="Resource" uid="uid://dtno5yhrnehf1" path="res://Player/inventory/playerinv.tres" id="2_2h2ow"]
-[ext_resource type="Texture2D" uid="uid://d2mnix3b3i4ci" path="res://Spirtes/CowboyIdle-removebg-preview.png" id="2_hrwsf"]
-[ext_resource type="Texture2D" uid="uid://bk3kk5iytgdd1" path="res://Spirtes/CowboyAnimation-removebg-preview.png" id="3_umlw4"]
+[ext_resource type="Texture2D" uid="uid://bjm7fqcwwhmim" path="res://Spirtes/CowboyIdle-removebg-preview.png" id="2_hrwsf"]
+[ext_resource type="Texture2D" uid="uid://c1bjot67gw1ke" path="res://Spirtes/CowboyAnimation-removebg-preview.png" id="3_umlw4"]
 [ext_resource type="PackedScene" uid="uid://ghkuta8coce0" path="res://Player/inventory/inv_ui.tscn" id="5_wqm4n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xrj3y"]

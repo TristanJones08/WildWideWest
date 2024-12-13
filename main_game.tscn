@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://11p8c16qgpa0"]
 
-[ext_resource type="Texture2D" uid="uid://bmep200jb2pvi" path="res://Spirtes/desert-16x16-2nd.png" id="1_n3ckx"]
+[ext_resource type="Texture2D" uid="uid://cbaa8uwmrb4ky" path="res://Spirtes/desert-16x16-2nd.png" id="1_n3ckx"]
 [ext_resource type="PackedScene" uid="uid://b2ugb2fnqvf8k" path="res://Player/player.tscn" id="2_8bxn1"]
 [ext_resource type="PackedScene" uid="uid://bit5ixlr3jent" path="res://enemy/skeleton.tscn" id="3_lvqho"]
 
