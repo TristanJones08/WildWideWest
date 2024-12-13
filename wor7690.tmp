@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhf32kwvl55fw"]
+
+[ext_resource type="PackedScene" uid="uid://b2ugb2fnqvf8k" path="res://player.tscn" id="1_en6ai"]
+[ext_resource type="PackedScene" uid="uid://cqj67a3anusho" path="res://inventory/Items/machete.tscn" id="2_mycib"]
+
+[node name="World" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_en6ai")]
+
+[node name="Collectable_Container" type="Node2D" parent="."]
+
+[node name="MacheteItem" parent="Collectable_Container" instance=ExtResource("2_mycib")]
+position = Vector2(41, -7)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://hioha2y3pedm"]
+
+[ext_resource type="Script" path="res://gun.gd" id="1_e7fyy"]
+[ext_resource type="Texture2D" uid="uid://1af5ktvxwwqs" path="res://crossbow.png" id="2_1gbfq"]
+
+[node name="Gun" type="Node2D"]
+script = ExtResource("1_e7fyy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.57628e-07, 0)
+scale = Vector2(0.102222, 0.0733333)
+texture = ExtResource("2_1gbfq")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(10, 0)
+
+[node name="shootSpeedTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="shootSpeedTimer" to="." method="_on_shoot_speed_timer_timeout"]
