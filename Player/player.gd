@@ -1,20 +1,19 @@
 extends CharacterBody2D
-
 class_name Player
 
 const SPEED = 100.0
 var current_dir = "none"
-
-@onready var health_system = $HealthSystem as HealthSystem
-
-@export var player_ui: PlayerUI
+var enemy_inattack_range = false
+var enemy_attack_cooldown = true
+var health = 100
+var allow_damage = true
 
 func _ready():
-	player_ui.set_health_bar_max_value(health_system.base_health)
 	$AnimatedSprite2D.play("idle")
 
 func _physics_process(delta):
 	player_movement(delta)
+	print(health)
 
 func player_movement(delta):
 	if Input.is_action_pressed("ui_right"):
@@ -61,6 +60,11 @@ func play_anim(movement):
 			anim.play("idle")
 @export var inv: Inv
 
-func take_damage(damage: int):
-	health_system.take_damage(damage)
-	player_ui.update_health_bar_value(health_system.current_health)
+
+func take_damage(amount):
+	if allow_damage == true:
+		allow_damage = false
+		health -= amount
+
+func _on_invulnerable_timer_timeout():
+	allow_damage = true

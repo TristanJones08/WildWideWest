@@ -1,12 +1,10 @@
-[gd_scene load_steps=26 format=3 uid="uid://b2ugb2fnqvf8k"]
+[gd_scene load_steps=24 format=3 uid="uid://b2ugb2fnqvf8k"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_keq52"]
 [ext_resource type="Resource" uid="uid://dtno5yhrnehf1" path="res://Player/inventory/playerinv.tres" id="2_2h2ow"]
 [ext_resource type="Texture2D" uid="uid://bjm7fqcwwhmim" path="res://Spirtes/CowboyIdle-removebg-preview.png" id="2_hrwsf"]
 [ext_resource type="Texture2D" uid="uid://c1bjot67gw1ke" path="res://Spirtes/CowboyAnimation-removebg-preview.png" id="3_umlw4"]
 [ext_resource type="PackedScene" uid="uid://ghkuta8coce0" path="res://Player/inventory/inv_ui.tscn" id="5_wqm4n"]
-[ext_resource type="Script" path="res://Player/Playerhealth/health.gd" id="6_uj1ml"]
-[ext_resource type="PackedScene" uid="uid://chqobxrdbrb02" path="res://Player/Playerhealth/player_ui.tscn" id="7_xy15x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xrj3y"]
 atlas = ExtResource("2_hrwsf")
@@ -134,13 +132,11 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0kep6"]
-radius = 1.0
-height = 4.0
+radius = 3.0
+height = 10.0
 
-[node name="player" type="CharacterBody2D" node_paths=PackedStringArray("player_ui")]
-collision_layer = 3
+[node name="player" type="CharacterBody2D"]
 script = ExtResource("1_keq52")
-player_ui = NodePath("PlayerUI")
 inv = ExtResource("2_2h2ow")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -150,8 +146,6 @@ sprite_frames = SubResource("SpriteFrames_ao8d1")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 4)
-rotation = 1.5708
 shape = SubResource("CapsuleShape2D_0kep6")
 
 [node name="Inv_UI" parent="." instance=ExtResource("5_wqm4n")]
@@ -163,7 +157,7 @@ offset_bottom = -4.0
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 
-[node name="HealthSystem" type="Node" parent="."]
-script = ExtResource("6_uj1ml")
+[node name="invulnerable timer" type="Timer" parent="."]
+one_shot = true
 
-[node name="PlayerUI" parent="." instance=ExtResource("7_xy15x")]
+[connection signal="timeout" from="invulnerable timer" to="." method="_on_invulnerable_timer_timeout"]

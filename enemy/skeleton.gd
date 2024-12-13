@@ -1,20 +1,35 @@
 extends CharacterBody2D
 
-class_name Skeleton
 
-@onready var navigation_agent_2d = $NavigationAgent2D
+@onready var range = $enemyrange
+@export var wander_direction : Node2D
 
-@export_group("Locomotion")
-@export var rotation_speed: float = 2
-@export var wandering_speed = 40
-@export var navifation_target: Node2D
-@export var chasing_speed = 80
-var current_speed
+var nearby = null
+var speed = 2500
 var player_chase = false
 var player = null
+var health = 100
 
-func _ready():
-	var navigation_map = get_tree().get_first_node_in_group("tilemap").get_navigation_map(0)
-	NavigationServer2D.agent_set_map(navigation_agent_2d.get_rid(), navigation_map)
-	navigation_agent_2d.set_navigation_map(navigation_map)
-	current_speed = wandering_speed
+func _physics_process(delta):
+	if player_chase:
+		velocity = (player.global_position - self.global_position ).normalized() * delta * speed
+	else:
+		velocity = wander_direction.direction * delta * speed
+	move_and_slide()
+
+	nearby = range.get_overlapping_bodies()
+	print(nearby.size())
+	for item in nearby:
+		print(item.name)
+		if item is Player:
+			player.take_damage(10)
+
+func _on_detection_area_entered(body):
+		player = body
+		player_chase = true
+
+func _on_detection_area_exited(body):
+		player = null
+		player_chase = false
+
+
