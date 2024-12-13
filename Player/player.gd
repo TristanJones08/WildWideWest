@@ -1,6 +1,10 @@
 extends CharacterBody2D
 class_name Player
 
+@export var inv: Inv
+
+@onready var actionable_finder: Area2D = $Directions/ActionableFinder
+
 @onready var invulnerable_timer = $"invulnerable timer"
 const SPEED = 100.0
 var current_dir = "none"
@@ -11,6 +15,13 @@ var allow_damage = true
 
 func _ready():
 	$AnimatedSprite2D.play("idle")
+
+func _unhandled_input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("ui_accept"):
+		var actionables = actionable_finder.get_overlapping_areas()
+		if actionables.size > 0:
+			actionables[0].action()
+			return
 
 func _physics_process(delta):
 	player_movement(delta)
@@ -61,7 +72,7 @@ func play_anim(movement):
 			anim.play("idle")
 @export var inv: Inv
 
-	
+
 func take_damage(amount):
 	if allow_damage == true:
 		allow_damage = false
@@ -69,7 +80,7 @@ func take_damage(amount):
 		$HealthBar.value = health
 		invulnerable_timer.stop()
 		invulnerable_timer.start()
-		
+
 
 func _on_invulnerable_timer_timeout():
 	allow_damage = true
