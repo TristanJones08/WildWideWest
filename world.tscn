@@ -5,6 +5,11 @@
 [ext_resource type="PackedScene" path="res://Player/inventory/Items/lost_item.tscn" id="3_ll5og"]
 [ext_resource type="PackedScene" path="res://NPC/lost_item_npc.tscn" id="4_xgvba"]
 [ext_resource type="PackedScene" path="res://NPC/wife_npc.tscn" id="7_5pglu"]
+[ext_resource type="PackedScene" uid="uid://b2ugb2fnqvf8k" path="res://player.tscn" id="1_en6ai"]
+[ext_resource type="PackedScene" uid="uid://cqj67a3anusho" path="res://inventory/Items/machete.tscn" id="2_mycib"]
+[ext_resource type="PackedScene" uid="uid://vuqh407yemff" path="res://inventory/Items/lost_item.tscn" id="3_ll5og"]
+[ext_resource type="PackedScene" uid="uid://d1hla6ar23s4w" path="res://NPC/lost_item_npc.tscn" id="4_xgvba"]
+[ext_resource type="PackedScene" uid="uid://cqlpn56qjn4au" path="res://NPC/wife_npc.tscn" id="7_5pglu"]
 
 [node name="World" type="Node2D"]
 

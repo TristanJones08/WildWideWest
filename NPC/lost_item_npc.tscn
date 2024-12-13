@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1hla6ar23s4w"]
+
+[ext_resource type="Texture2D" uid="uid://dq7vkjs11cd50" path="res://NPC/pixil-frame-0 (2).png" id="1_c7cg4"]
+[ext_resource type="Script" path="res://NPC/lost_item_npc.gd" id="1_yuhnm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1njn5"]
+size = Vector2(18, 31)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4lxhj"]
+radius = 23.0868
+
+[node name="LostItemNPC" type="StaticBody2D"]
+script = ExtResource("1_yuhnm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_1njn5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.5, 1)
+scale = Vector2(0.90625, 0.9375)
+texture = ExtResource("1_c7cg4")
+
+[node name="interactable_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable_area"]
+position = Vector2(1, 2)
+shape = SubResource("CircleShape2D_4lxhj")

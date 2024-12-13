@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://b2ugb2fnqvf8k"]
+[gd_scene load_steps=26 format=3 uid="uid://b2ugb2fnqvf8k"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_keq52"]
 [ext_resource type="Resource" uid="uid://dtno5yhrnehf1" path="res://inventory/playerinv.tres" id="2_2h2ow"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://c1bjot67gw1ke" path="res://Spirtes/CowboyAnimation-removebg-preview.png" id="3_umlw4"]
 [ext_resource type="PackedScene" uid="uid://ghkuta8coce0" path="res://inventory/inv_ui.tscn" id="5_wqm4n"]
 [ext_resource type="PackedScene" uid="uid://c1qqt30lobwir" path="res://machete.tscn" id="6_snxc2"]
-[ext_resource type="PackedScene" uid="uid://hioha2y3pedm" path="res://gun.tscn" id="7_yhgbs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xrj3y"]
 atlas = ExtResource("2_hrwsf")
@@ -138,7 +137,7 @@ radius = 1.0
 height = 4.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bm6lh"]
-radius = 6.0
+radius = 25.0
 
 [node name="player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 2
@@ -166,15 +165,14 @@ offset_bottom = -4.0
 
 [node name="Directions" type="Marker2D" parent="."]
 
-[node name="Area2D" type="Area2D" parent="Directions"]
+[node name="ActionableFinder" type="Area2D" parent="Directions"]
+collision_layer = 17
+collision_mask = 17
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Directions/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Directions/ActionableFinder"]
 position = Vector2(0, -11)
 shape = SubResource("CircleShape2D_bm6lh")
 
 [node name="Machete" parent="." instance=ExtResource("6_snxc2")]
 position = Vector2(-65.2975, 4.93263)
 scale = Vector2(0.013076, 0.00973975)
-
-[node name="Gun" parent="." instance=ExtResource("7_yhgbs")]
-position = Vector2(0, -11)

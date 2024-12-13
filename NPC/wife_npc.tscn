@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqlpn56qjn4au"]
+
+[ext_resource type="Script" path="res://NPC/wife_npc.gd" id="1_iw6df"]
+[ext_resource type="Texture2D" uid="uid://cb7c1l3dm3va" path="res://NPC/pixil-frame-0 (4).png" id="2_4ggux"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ekijt"]
+size = Vector2(15, 26)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yx8m1"]
+radius = 22.0
+
+[node name="WifeNPC" type="StaticBody2D"]
+script = ExtResource("1_iw6df")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_ekijt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.5, 3.5)
+scale = Vector2(0.78125, 0.78125)
+texture = ExtResource("2_4ggux")
+
+[node name="interactable_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable_area"]
+position = Vector2(3, 3)
+shape = SubResource("CircleShape2D_yx8m1")
