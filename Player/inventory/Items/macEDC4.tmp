@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqj67a3anusho"]
+
+[ext_resource type="Script" path="res://inventory/Items/machete.gd" id="1_m4n8u"]
+[ext_resource type="Texture2D" uid="uid://btwaesdtp01og" path="res://inventory/pixil-frame-0 (1).png" id="1_njni7"]
+[ext_resource type="Resource" uid="uid://duwg02avtlibn" path="res://inventory/machete.tres" id="2_xidq6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gu6gh"]
+size = Vector2(14, 13)
+
+[node name="MacheteItem" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_m4n8u")
+item = ExtResource("2_xidq6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gu6gh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1, 0.928571)
+texture = ExtResource("1_njni7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

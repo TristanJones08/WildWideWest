@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bmt4bl2b1pask"]
+[gd_scene load_steps=2 format=3 uid="uid://c1qqt30lobwir"]
 
-[ext_resource type="Texture2D" uid="uid://dbpkbro7hlrv6" path="res://Spirtes/images-removebg-preview.png" id="1_u1x2c"]
+[ext_resource type="Texture2D" uid="uid://cqel66u10s2us" path="res://inventory/machete.png" id="1_f8rma"]
 
-[node name="Machete" type="Node2D"]
+[node name="Node2D" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.139, 0.15)
-texture = ExtResource("1_u1x2c")
+[node name="Machete" type="Sprite2D" parent="."]
+position = Vector2(0, 1.90735e-06)
+rotation = -1.55509
+scale = Vector2(0.00379745, 0.00455584)
+texture = ExtResource("1_f8rma")
