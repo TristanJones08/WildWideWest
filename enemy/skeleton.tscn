@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://bit5ixlr3jent"]
+
+[ext_resource type="Script" path="res://enemy/skeleton.gd" id="1_mmecj"]
+[ext_resource type="Texture2D" uid="uid://cic2n0tm08woi" path="res://png-clipart-skeleton-2d-computer-graphics-sprite-two-dimensional-space-skeleton-game-video-game-removebg-preview.png" id="1_yuk0t"]
+[ext_resource type="PackedScene" uid="uid://d2smgcwcvo12p" path="res://enemy/wander.tscn" id="3_chqu8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ri03n"]
+radius = 7.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1ogmj"]
+radius = 116.017
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l1g2o"]
+radius = 31.0161
+
+[node name="skeleton" type="CharacterBody2D" node_paths=PackedStringArray("wander_direction")]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_mmecj")
+wander_direction = NodePath("Wander")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(-1.90735e-06, -1.90735e-06)
+scale = Vector2(0.114179, 0.120968)
+texture = ExtResource("1_yuk0t")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 17)
+shape = SubResource("CircleShape2D_ri03n")
+
+[node name="Wander" parent="." instance=ExtResource("3_chqu8")]
+group_name = "enemypatol"
+
+[node name="Dectection" type="Area2D" parent="."]
+position = Vector2(0, 2)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dectection"]
+shape = SubResource("CircleShape2D_1ogmj")
+
+[node name="enemyrange" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemyrange"]
+shape = SubResource("CircleShape2D_l1g2o")
+
+[connection signal="body_entered" from="Dectection" to="." method="_on_dectection_body_entered"]
+[connection signal="body_exited" from="Dectection" to="." method="_on_dectection_body_exited"]
