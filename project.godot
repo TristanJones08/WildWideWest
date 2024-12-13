@@ -18,7 +18,10 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+<<<<<<< Updated upstream
 State="res://state.gd"
+=======
+>>>>>>> Stashed changes
 Global="*res://global.gd"
 
 [dialogue_manager]
