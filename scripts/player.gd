@@ -70,7 +70,6 @@ func play_anim(movement):
 			anim.play("walking")
 		elif movement == 0:
 			anim.play("idle")
-@export var inv: Inv
 
 
 func take_damage(amount):
