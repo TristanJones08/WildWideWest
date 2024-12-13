@@ -23,3 +23,13 @@ func _physics_process(delta):
 		print(item.name)
 		if item is Player:
 			item.take_damage(10)
+
+
+func _on_dectection_body_entered(body):
+	player = body
+	player_chase = true
+
+
+func _on_dectection_body_exited(body):
+	player = null
+	player_chase = false
