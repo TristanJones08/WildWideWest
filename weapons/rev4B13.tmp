@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dby7382miydrm"]
+
+[ext_resource type="Script" path="res://weapons/revolver.gd" id="1_m0j4g"]
+[ext_resource type="Texture2D" uid="uid://tcc8avxjoeqg" path="res://pixel_revolver-removebg-preview.png" id="2_u3cdx"]
+
+[node name="Revolver" type="Node2D"]
+script = ExtResource("1_m0j4g")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+
+[node name="PixelRevolver-removebg-preview" type="Sprite2D" parent="."]
+scale = Vector2(0.0235148, 0.0216005)
+texture = ExtResource("2_u3cdx")
+flip_h = true

@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqj67a3anusho"]
+
+[ext_resource type="Script" path="res://inventory/Items/machete.gd" id="1_m4n8u"]
+[ext_resource type="Texture2D" uid="uid://btwaesdtp01og" path="res://inventory/Items/pixil-frame-0 (1).png" id="1_njni7"]
+[ext_resource type="Resource" uid="uid://duwg02avtlibn" path="res://inventory/Items/machete.tres" id="2_xidq6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o1ht1"]
+radius = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o1ht1"]
+radius = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_055r2"]
+size = Vector2(14, 10.7692)
+
+[node name="collectible_machete" type="StaticBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_m4n8u")
+item = ExtResource("2_xidq6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_o1ht1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -0.25)
+scale = Vector2(0.428571, 0.464286)
+texture = ExtResource("1_njni7")
+
+[node name="interactable_area" type="Area2D" parent="."]
+position = Vector2(0, -0.25)
+scale = Vector2(0.428571, 0.464286)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable_area"]
+position = Vector2(1.39077e-07, -0.538462)
+shape = SubResource("RectangleShape2D_055r2")
+
+[connection signal="body_entered" from="interactable_area" to="." method="_on_interactable_area_body_entered"]
